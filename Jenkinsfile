@@ -17,6 +17,8 @@ pipeline {
         stage('Run CI Script') {
 
             steps {
+                // 권한 설정
+                sh 'chmod +x main2.sh'
                 // GitHub Actions의 `run:` 과 동일한 개념
                 // → 실제로 실행될 커맨드
                 sh './main2.sh'
